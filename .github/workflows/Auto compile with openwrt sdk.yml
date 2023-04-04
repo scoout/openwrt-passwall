@@ -14,7 +14,7 @@ on:
   # schedule:
   #   - cron: "0 */4 * * *"
 env:
-  TZ: Asia/Shanghai
+  TZ: Asia/Jakarta
 
 
 jobs:
@@ -25,8 +25,8 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          - platform: x86_64
-            url_sdk: https://downloads.openwrt.org/snapshots/targets/x86/64/openwrt-sdk-x86-64_gcc-12.2.0_musl.Linux-x86_64.tar.xz
+          - platform: x86_generic
+            url_sdk: https://downloads.openwrt.org/snapshots/targets/x86/generic/openwrt-sdk-x86-generic_gcc-12.2.0_musl.Linux-x86_64.tar.xz
 
           # - platform: zynq_generic
           #   url_sdk: https://downloads.openwrt.org/snapshots/targets/zynq/generic/openwrt-sdk-zynq-generic_gcc-12.2.0_musl_eabi.Linux-x86_64.tar.xz
